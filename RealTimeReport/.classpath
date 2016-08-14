@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libs/selenium-java-2.53.1-srcs.jar"/>
+	<classpathentry kind="lib" path="libs/selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="libs/testng-6.9.10.jar"/>
+	<classpathentry kind="lib" path="libs/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
