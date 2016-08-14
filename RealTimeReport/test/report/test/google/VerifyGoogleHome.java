@@ -22,7 +22,7 @@ public class VerifyGoogleHome {
 
 	@Test
 	public void testGoogleHome() {
-		driver.get("https://www.google1.com");
+		driver.get("https://www.google.com");
 	}
 
 	@AfterTest
