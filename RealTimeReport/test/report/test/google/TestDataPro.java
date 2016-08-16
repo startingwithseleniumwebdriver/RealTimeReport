@@ -1,4 +1,4 @@
-package report.realtime.datahandler;
+package report.test.google;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,7 +23,7 @@ private static Properties testMataDataProp = new Properties();
 
 	@DataProvider
 	public static Object[][] getdata(){
-		String locales = testMataDataProp.getProperty("LOCALE");
+		String locales = testMataDataProp.getProperty("SEARCH");
 		List<String> localeList = new ArrayList<String>(); 
 		localeList = Arrays.asList(locales.split(","));
 		Object[][] loc = new Object[localeList.size()][1];

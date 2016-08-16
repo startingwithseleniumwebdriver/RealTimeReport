@@ -1,5 +1,6 @@
 package report.test.google;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -24,7 +25,11 @@ public class VerifyGoogleHome {
 	public void testGoogleHome() {
 		driver.get("https://www.google.com");
 	}
-
+	@Test(dataProviderClass=TestDataPro.class,dataProvider="getdata")
+	public void testGoogleWithSearch(String searchData) {
+		driver.get("https://www.google.com");
+		driver.findElement(By.name("q")).sendKeys(searchData);
+	}
 	@AfterTest
 	public void afterTest() {
 		driver.quit();
