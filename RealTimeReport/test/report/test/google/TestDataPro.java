@@ -29,9 +29,7 @@ private static Properties testMataDataProp = new Properties();
 		Object[][] loc = new Object[localeList.size()][1];
 		for(int i=0;i<loc.length;i++){
 			loc[i][0] = new String(localeList.get(i));
-			//System.out.println("Remote Locale "+i+": "+loc[i][0]);
 		}
 		return loc;
-		//return new Object[][]{{"/en_us"},{"/fr_fr"}};
 	}
 }
