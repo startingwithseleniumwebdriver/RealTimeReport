@@ -509,7 +509,7 @@
 <xsl:template name="footer">
 	<!-- Footer section start -->
 	<footer>
-		<p>All Rights Reserved | Design by</p>
+		<p>Design by 'startingwithseleniumwebdriver' team</p>
 	</footer>
 	<!-- Footer section end -->
 </xsl:template>
