@@ -18,7 +18,7 @@ Credits :-
 --------------------------------
 --------------------------------
 1. Santu Saha (saha.santu@gmail.com)
-2. Arjun Ray (arjunray12@gmail.com)
-3. Rohan Ghosh (ghoshrohan07@gmail.com)
+2. Rohan Ghosh (ghoshrohan07@gmail.com)
+3. Arjun Ray (arjunray12@gmail.com)
 4. Dipankar Rana (dipankar_6612@yahoo.co.in)
 5. Ananta Bose
