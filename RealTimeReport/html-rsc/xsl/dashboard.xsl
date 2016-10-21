@@ -413,28 +413,28 @@
 									</div>
 									<div id="collapse{$index}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{$index}">
 										<div class="panel-body panel_text panel-body-new">
-											<p>Name: <xsl:value-of select="$name" /></p>
-											<p>Instance: <xsl:value-of select="$instance" /></p>
-											<p>Parameters: 
+											<p><strong>Name: </strong> <xsl:value-of select="$name" /></p>
+											<p><strong>Instance: </strong> <xsl:value-of select="$instance" /></p>
+											<p><strong>Parameters: </strong> 
 												<xsl:for-each select="methodParameters/methodParameter">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" />
 												</xsl:for-each>
 											</p>
-											<p>Context Group Name:
+											<p><strong>Context Group Name: </strong>
 												<xsl:for-each select="contextGroups/contextGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
 											</p>
-											<p>Method Group Name:
+											<p><strong>Method Group Name: </strong>
 												<xsl:for-each select="methodGroups/methodGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
 											</p>
-											<p>Start time: <xsl:value-of select="$start" /></p>
-											<p>End time: <xsl:value-of select="$end" /></p>
-											<p>Duration: <i id="dura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','dura<xsl:value-of select="position()" />')</script></i></p>
+											<p><strong>Start time: </strong> <xsl:value-of select="$start" /></p>
+											<p><strong>End time: </strong> <xsl:value-of select="$end" /></p>
+											<p><strong>Duration: </strong> <i id="dura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','dura<xsl:value-of select="position()" />')</script></i></p>
 											<xsl:if test="$verdict != 'PASS'">
-												<p class="wrapper">Error: <xsl:value-of select="$exception" /></p>
+												<p class="breaker"><strong>Reason: </strong> <xsl:value-of select="$exception" /></p>
 											</xsl:if>
 										</div>
 									</div>
@@ -471,29 +471,29 @@
 									</div>
 									<div id="ccollapse{$index}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="cheading{$index}">
 										<div class="panel-body panel_text panel-body-new">
-											<p>Name: <xsl:value-of select="$name" /></p>
-											<p>Annotation: <xsl:value-of select="$getAnnotation" /></p>
-											<p>Instance: <xsl:value-of select="$instance" /></p>
-											<p>Parameters: 
+											<p><strong>Name: </strong> <xsl:value-of select="$name" /></p>
+											<p><strong>Annotation: </strong> <xsl:value-of select="$getAnnotation" /></p>
+											<p><strong>Instance: </strong> <xsl:value-of select="$instance" /></p>
+											<p><strong>Parameters: </strong> 
 												<xsl:for-each select="methodParameters/methodParameter">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" />
 												</xsl:for-each>
 											</p>
-											<p>Context Group Name:
+											<p><strong>Context Group Name: </strong>
 												<xsl:for-each select="contextGroups/contextGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
 											</p>
-											<p>Method Group Name:
+											<p><strong>Method Group Name: </strong>
 												<xsl:for-each select="methodGroups/methodGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
 											</p>
-											<p>Start time: <xsl:value-of select="$start" /></p>
-											<p>End time: <xsl:value-of select="$end" /></p>
-											<p>Duration: <i id="cdura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','cdura<xsl:value-of select="position()" />')</script></i></p>
+											<p><strong>Start time: </strong> <xsl:value-of select="$start" /></p>
+											<p><strong>End time: </strong> <xsl:value-of select="$end" /></p>
+											<p><strong>Duration: </strong> <i id="cdura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','cdura<xsl:value-of select="position()" />')</script></i></p>
 											<xsl:if test="$verdict != 'PASS'">
-												<p class="wrapper">Error: <xsl:value-of select="$exception" /></p>
+												<p class="breaker"><strong>Error: </strong> <xsl:value-of select="$exception" /></p>
 											</xsl:if>
 										</div>
 									</div>
