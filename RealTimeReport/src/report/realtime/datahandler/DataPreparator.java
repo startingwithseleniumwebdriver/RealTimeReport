@@ -309,11 +309,15 @@ public class DataPreparator {
 		return time;
 	}
 
-	private static String getStackStraceInformation(Throwable th) {
+	private static String getStackStraceInformation(Throwable th){
 		String stack = null;
 		StringBuilder sb = new StringBuilder();
+		String message = th.getMessage();
+		if(message != null){
+			sb.append(message+"\n");
+		}
 		for (StackTraceElement iTestStackTrace : th.getStackTrace()) {
-			sb.append(iTestStackTrace.toString() + "\n");
+			sb.append(iTestStackTrace.toString()+"\n");
 		}
 		stack = sb.toString();
 		return stack;
