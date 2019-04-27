@@ -161,10 +161,12 @@ public class DataPreparator {
 		List<ExMethodResultDTO> resultDTOs = new ArrayList<ExMethodResultDTO>();
 		ExMethodResultDTO dto;
 		for (ITestNGMethod iTestNGMethod : suite.getExcludedMethods()) {
-			dto = new ExMethodResultDTO();
-			dto.setDataProvider(getDataProvider(iTestNGMethod));
-			dto.setExcludedMethod(iTestNGMethod.getMethodName());
-			resultDTOs.add(dto);
+			if(iTestNGMethod.isTest()){
+				dto = new ExMethodResultDTO();
+				dto.setDataProvider(getDataProvider(iTestNGMethod));
+				dto.setExcludedMethod(iTestNGMethod.getMethodName());
+				resultDTOs.add(dto);
+			}
 		}
 		return resultDTOs;
 	}
