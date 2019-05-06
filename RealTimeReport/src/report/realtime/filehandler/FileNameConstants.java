@@ -60,7 +60,7 @@ public class FileNameConstants {
 	 * index.html static content
 	 */
 
-	public static final String INDEX_HEADER = "<!DOCTYPE HTML>" + "<html>" + "<head>" + "<title>Run Time Report</title>"
+	public static final String INDEX_HEADER = "<!DOCTYPE HTML>" + "<html>" + "<head>" + "<title>Real Time Report</title>"
 			+ "<meta name='viewport' content='width=device-width, initial-scale=1'>"
 			+ "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />"
 			+ "<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css' />"
@@ -70,9 +70,10 @@ public class FileNameConstants {
 			+ "</head>";
 
 	public static final String INDEX_BODY_PRE = "<body class='body-w-bg'>" + "<div class='container-fluid'>"
-			+ "<div class='col-md-3'>" + "</div>" + "<div class='col-md-6 center hazy gap-top'>"
-			+ "<div class='txt'></div>" + "<h1> <i class='fa fa-line-chart'></i> Real Time Report </h1>";
+			+ "<div class='col-md-3'>" + "</div>" + "<div class='col-md-6 center hazy'>"
+			+ "<div class='txt'></div>" + "<h1> <i class='fa fa-line-chart'></i> Real Time Report </h1>"
+			+ "<div style='padding-bottom:20px;'>";
 
-	public static final String INDEX_BODY_POST = "</div>" + "<div class='col-md-3'>" + "</div>" + "</div>" + "</body>"
+	public static final String INDEX_BODY_POST = "</div>" + "</div>" + "<div class='col-md-3'>" + "</div>" + "</div>" + "</body>"
 			+ "</html>";
 }
