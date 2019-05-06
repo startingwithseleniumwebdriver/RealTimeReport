@@ -65,9 +65,18 @@
 	font-size: 22px;
 }
 .highlight p.number{
-	font-size: 42px;
+	position: relative;
+	top: -10;
+	font-size: 65px;
 	bottom: 0;
 	float: right;
+	right: -5px;
+}
+.font-800 {
+	font-weight: 800;
+}
+.font-600 {
+	font-weight: 600;
 }
 .blue{
 	background-color: #3598dc;
@@ -83,6 +92,10 @@
 }
 .gap-below {
 	padding-bottom: 15px;
+}
+.fix-height {
+	padding-right: 0px;
+    height: 135px;
 }
 .gap-top{
 	margin-top:100px;
@@ -300,8 +313,7 @@ i.fa-filter{
 /*==================== index page CSS =============================*/
 
 .body-w-bg{
-	
-	position: relative;
+	/* position: relative; */
 	z-index: 1;
 }
 .body-w-bg:before{
@@ -310,8 +322,8 @@ i.fa-filter{
 	content: "";
 	opacity: 0.4;
 	z-index: -1;
-	width: 1280px;
-	height: 590px;
+	width: 100%;
+	height: 100%;
 }
 .body-w-bg h1{
 	font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
@@ -324,11 +336,12 @@ i.fa-filter{
 .hazy{
 	position: relative;
 	z-index: 1;
+	margin-top: 15%;
 }
 .hazy .txt{
 	position: absolute;
-	height: 400px;
-	width: 600px;
+	height: 100%;
+	width: 95%;
 	z-index: -1;
 	opacity: 0.5;
 	background: #000;
