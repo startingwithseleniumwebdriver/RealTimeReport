@@ -186,7 +186,7 @@
 				function getHMS(ms,id){
 					var tms = parseInt(ms);
 					var tm = moment.duration(tms);
-					var message = tm.hours()+"h "+tm.minutes()+"m "+tm.seconds()+"s";
+					var message = tm.hours()+":"+tm.minutes()+":"+tm.seconds();
 					$('#'+id).html(message);
 				}
 				function getPercent(decimal,id){
@@ -313,10 +313,10 @@
 				}
 			</script>
 			<div class="col-md-6">
-				<div class="col-md-6 gap-below highlight">
+				<div class="col-md-6 gap-below highlight fix-height">
 					<div class="r3_counter_box blue">
 						<p class="title left">Suite</p>
-						<p class="number right">
+						<p class="number right font-800">
 						<xsl:if test="$totalSuite &gt; 0">
 							<xsl:value-of select="$totalSuite" />
 						</xsl:if>
@@ -326,22 +326,22 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-6 gap-below highlight">
+				<div class="col-md-6 gap-below highlight fix-height">
 					<div class="r3_counter_box green">
 						<p class="title left">Executable Test Methods</p>
-						<p class="number right"><xsl:value-of select="$executableMethod" /></p>
+						<p class="number right font-800"><xsl:value-of select="$executableMethod" /></p>
 					</div>
 				</div>
-				<div class="col-md-6 highlight">
+				<div class="col-md-6 highlight fix-height">
 					<div class="r3_counter_box purple">
 						<p class="title left">Running Parallel</p>
-						<p class="number right"><xsl:value-of select="$parallel" /></p>
+						<p class="number right font-600"><xsl:value-of select="$parallel" /></p>
 					</div>
 				</div>
-				<div class="col-md-6 highlight">
+				<div class="col-md-6 highlight fix-height">
 					<div class="r3_counter_box red">
 						<p class="title left">Suite Execution Time</p>
-						<p class="number right" id="totTm"><script>getHMS('<xsl:value-of select="$executionTime" />','totTm')</script></p>
+						<p class="number right font-600" id="totTm"><script>getHMS('<xsl:value-of select="$executionTime" />','totTm')</script></p>
 					</div>
 				</div>
 			</div>
