@@ -88,10 +88,10 @@ public class CreateFiles {
 		}
 
 		/*
-		 * STEP 6: Finally create index.html page
+		 * STEP 6: Finally create index.html page and one dashboard.html page per suite
 		 */
 		createIndexPage();
-
+		createBlankDashboardPage();
 	}
 
 	synchronized private static void copyFilesToDestination(String[] files, String destDirPath) {
@@ -195,6 +195,37 @@ public class CreateFiles {
 			pw.write(FileNameConstants.INDEX_BODY_POST);
 			pw.flush();
 			pw.close();
+		}
+	}
+	
+	/**
+	 * Method will create a dashboard.html page per suite. This page
+	 * will contain only one line - "You are too quick. Please Wait for at least 1 test to end..."
+	 * and will set to auto refresh in every 3sec.
+	 */
+	synchronized private static void createBlankDashboardPage(){
+		for (DataSuite ds : DataMap.suiteSet){
+			String dashboradHtml = REPORT_DIR + ds.getSuiteHTMLPath();
+			if (new File(dashboradHtml).exists()) {
+				new File(dashboradHtml).delete();
+			}
+			PrintWriter pw = null;
+			try {
+				pw = new PrintWriter(new FileOutputStream(
+						new File(dashboradHtml), false));
+			} catch (FileNotFoundException e) {
+			}
+			if (pw != null) {
+				pw.write("<!DOCTYPE HTML>" + "<html>" + "<head>" + "<title>Dashboard</title>"
+						+ "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />"
+						+ "<meta http-equiv='refresh' content='3'>" + "</head>"
+						+ "<body>" + "<div style='font-size: 48px;'>"
+						+ "You are too quick. Please Wait for at least 1 test to end...</div>"
+						+ "</body>" + "</html>");
+				pw.flush();
+				pw.close();
+			
+			}
 		}
 	}
 	
