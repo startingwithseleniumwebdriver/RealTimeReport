@@ -313,7 +313,7 @@ public class DataPreparator {
 			sb.append(message+"\n");
 		}
 		for (StackTraceElement iTestStackTrace : th.getStackTrace()) {
-			sb.append(iTestStackTrace.toString()+"\n");
+			sb.append("\t\t\t\t\t\t"+iTestStackTrace.toString()+"\n");
 		}
 		stack = sb.toString();
 		return stack;
