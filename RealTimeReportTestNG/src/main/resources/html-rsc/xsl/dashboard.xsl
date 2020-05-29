@@ -398,7 +398,15 @@
 										<h4 class="nw-page-title">
 											<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#Accordion" href="#collapse{$index}" aria-expanded="true" aria-controls="collapseOne">
 												<span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span>
-												<label><xsl:value-of select="$name" /></label>
+												<label style="word-wrap: break-word; cursor: pointer;">
+													<xsl:value-of select="$name" /> (
+													<xsl:for-each select="methodParameters/methodParameter">
+														<xsl:value-of select="text()"/>
+														<xsl:if test="position() != last()">
+														, 
+														</xsl:if>
+													</xsl:for-each> )
+												</label>
 												<xsl:if test="$verdict = 'PASS'">
 												<i class="pass fa fa-check"></i>
 												</xsl:if>
@@ -456,7 +464,15 @@
 										<h4 class="nw-page-title">
 											<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#Accordion" href="#ccollapse{$index}" aria-expanded="true" aria-controls="collapseOne">
 												<span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span>
-												<label><xsl:value-of select="$name" /></label>
+												<label style="word-wrap: break-word; cursor: pointer;">
+													<xsl:value-of select="$name" /> (
+													<xsl:for-each select="methodParameters/methodParameter">
+														<xsl:value-of select="text()"/>
+														<xsl:if test="position() != last()">
+														, 
+														</xsl:if>
+													</xsl:for-each> )
+												</label>
 												<xsl:if test="$verdict = 'PASS'">
 												<i class="pass fa fa-check"></i>
 												</xsl:if>
