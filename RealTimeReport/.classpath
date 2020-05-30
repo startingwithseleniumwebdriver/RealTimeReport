@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="libs/selenium-java-2.53.1.jar"/>
 	<classpathentry kind="lib" path="libs/testng-6.9.10.jar"/>
 	<classpathentry kind="lib" path="libs/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="libs/jaxb-impl-2.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

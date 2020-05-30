@@ -66,7 +66,7 @@ public class CreateFiles {
 		 * STEP 6: Finally create index.html page
 		 */
 		createIndexPage();
-
+		createBlankDashboardPage();
 	}
 
 	synchronized private static void copyFilesToDestination(File[] files, String parentFolderPath) {
@@ -116,6 +116,30 @@ public class CreateFiles {
 			pw.write(FileNameConstants.INDEX_BODY_POST);
 			pw.flush();
 			pw.close();
+		}
+	}
+	
+	synchronized private static void createBlankDashboardPage(){
+		for (DataSuite ds : DataMap.suiteSet){
+			if (new File("./" + FileNameConstants.ROOT_FOLDER + "/" + ds.getSuiteHTMLPath()).exists()) {
+				new File("./" + FileNameConstants.ROOT_FOLDER + "/" + ds.getSuiteHTMLPath()).delete();
+			}
+			PrintWriter pw = null;
+			try {
+				pw = new PrintWriter(new FileOutputStream(
+						new File("./" + FileNameConstants.ROOT_FOLDER + "/" + ds.getSuiteHTMLPath()), false));
+			} catch (FileNotFoundException e) {
+			}
+			if (pw != null) {
+				pw.write("<!DOCTYPE HTML>" + "<html>" + "<head>" + "<title>Dashboard</title>"
+						+ "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />"
+						+ "<meta http-equiv='refresh' content='3'>" + "</head>"
+						+ "<body>" + "<div style='font-size: 48px;'>"
+						+ "You are too quick. Waiting for at least 1 test to end...</div>"
+						+ "</body>" + "</html>");
+				pw.flush();
+				pw.close();
+			}
 		}
 	}
 }

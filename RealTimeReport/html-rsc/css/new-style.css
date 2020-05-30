@@ -265,7 +265,7 @@ background-color: #efefef;
 }
 .panel_text {
     font-size: 14px;
-    color: #999;
+    color: #211b1b;
     line-height: 1.8em;
 }
 .pa_italic .fa-chevron-up{
@@ -308,6 +308,7 @@ i.fa-filter{
 .breaker{
 	content: '\a' ;
 	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 /*==================== index page CSS =============================*/
